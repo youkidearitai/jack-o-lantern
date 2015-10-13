@@ -2,6 +2,12 @@
 
 Jack-o-Lantern to Arduino.
 
+## Instllation
+
+Required pyserial
+
+    $ pip install pyserial
+
 ## Parts
 
 + OSM2DK511A-UV 
