@@ -12,7 +12,7 @@ try:
         print(line)
 
         time.sleep(1)
-
-raise:
+except BaseException:
     ser.close()
+    print("closed connection")
 
