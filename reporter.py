@@ -3,20 +3,24 @@
 import serial
 import time
 
+import printer
+
 # put device below here.
 ser = serial.Serial('/dev/tty.usbserial-AH016NS4', 9600);
 trickOrTreatCount = 0
+
+p = printer.Printer()
 
 try:
     while ser.readable():
         line = ser.readline()
         if line != "":
             trickOrTreatCount = trickOrTreatCount + 1
-            print("Trick-Or-Treat!!")
+            p.trickOrTreet()
 
         time.sleep(1)
 except BaseException:
     ser.close()
-    print("closed connection")
-    print("Trick-Or-Treat count: {0}".format(trickOrTreatCount))
+    p.closed()
+    p.onCount(trickOrTreatCount)
 
