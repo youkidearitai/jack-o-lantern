@@ -4,8 +4,8 @@ class Printer(object):
     def __init__(self):
         pass
 
-    def trickOrTreet(self):
-        print("Trick-Or-Treat!!")
+    def trickOrTreet(self, line):
+        print("Trick-Or-Treat!!: {0}".format(line))
 
     def closed(self):
         print("closed connection")
